@@ -51,38 +51,25 @@ Follow these steps to set up and run the project locally.
 
 1.  **Navigate to the academia-synapse directory:**
     ```bash
-    # a. Update the local package database
-    sudo apt update
-    
-    # b. Install the package
-    sudo apt install -y mongodb-org
-    
-    #c. Once installed, the mongodb user will be automatically created, and you can start your database:
-    sudo systemctl start mongod
-    sudo systemctl enable mongod
-    sudo systemctl status mongod
-    ```
-
-2.  **Navigate to the academia-synapse directory:**
-    ```bash
     cd academia-synapse
     ```
-3.  **Install dependencies:**
+
+2.  **Use docker-compose to start the application:**
     ```bash
-    npm install
+    # a. Start the frontend, backend and database together
+    docker compose up -d --build
+    
+    # b. verify if the backend is able to connect to DB
+    docker compose logs -f backend
+    
+    #c. Access the frontend
+    http://localhost:3000
     ```
 
-4.  **Start the backend and frontend server:**
-     ```bash
-    npm start
-
-    # Application opens at http://localhost:3000
+3.  **Stop Application:**
+    ```bash
+    docker compose down
     ```
-
-## Running Tests
-```bash
-npm run test-all
-```
 
 Author - Soumiyajit Das Chowdhury
 
