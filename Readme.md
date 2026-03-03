@@ -51,7 +51,7 @@ Follow these steps to set up and run the project locally.
 
 1.  **Navigate to the academia-synapse directory:**
     ```bash
-    cd academia-synapse
+    cd academia-synapse-docker
     ```
 
 2.  **Use docker-compose to start the application:**
